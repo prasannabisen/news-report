@@ -1,23 +1,7 @@
-const express=require("express")
-const app=express()
-
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('bef63e1bb3b84f68a62bc31d486bd332');
-
-app.set('view engine','hbs')
-
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-
-app.get("/",(req,res)=>{
-    res.render('index')
-})
-
-app.post('/',(req,res)=>{
-    const inp=req.body.input
+const input=document.getElementById('input')
     newsapi.v2.everything({
         sources: 'bbc-news,bbc-sport,abc-news',
-        q:inp,
+        q:input.value,
         language: 'en'
     }).then(response => {
         var kk=response.articles;
@@ -33,8 +17,3 @@ app.post('/',(req,res)=>{
         }).catch(err=>{
             console.log(err);
         })
-})
-
-app.listen(3000,()=>{
-    console.log("connected")
-})
