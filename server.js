@@ -1,21 +1,17 @@
 const express=require("express")
 const app=express()
 
-const input=document.getElementById("input")
-const button=document.getElementById("button")
-
-
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('bc39086298154fd1a28885f45bf62b4d');
+const newsapi = new NewsAPI('bef63e1bb3b84f68a62bc31d486bd332');
     
-
 app.get("/",(req,res)=>{
     newsapi.v2.topHeadlines({
-        sources: 'bbc-news,bbc-sport',
-        q: 'Cricket',
+        sources: 'bbc-news,bbc-sport,abc-news',
+        q:'uk',
         language: 'en'
     }).then(response => {
-    res.send(response);
+    res.send(response.articles[0].source);
+    console.log(response.articles[0].source)
 }).catch(err=>{
     console.log(err);
 })
