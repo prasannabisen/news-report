@@ -1,5 +1,6 @@
 const express=require("express")
 const app=express()
+const port=process.env.PORT ||3000
 
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('bef63e1bb3b84f68a62bc31d486bd332');
@@ -35,6 +36,6 @@ app.post('/',(req,res)=>{
         })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("connected")
 })
