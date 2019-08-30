@@ -5,6 +5,7 @@ const port=process.env.PORT ||3000
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('bef63e1bb3b84f68a62bc31d486bd332');
 
+app.use(express.static('public'))
 app.set('view engine','hbs')
 
 app.use(express.json())
