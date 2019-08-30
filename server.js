@@ -13,15 +13,15 @@ app.use(express.urlencoded({ extended: true }))
 app.get("/",(req,res)=>{
     var headline
     const search=req.query.input
-    res.render('index')
     console.log(search)
     newsapi.v2.everything({
         sources: 'bbc-news,bbc-sport,abc-news',
         q:search,
         language: 'en'
     }).then(response => {
+        const resp=response;
         console.log(response);
-        res.render('index',{response})
+        res.render('index',{resp})
 })
 })
 
