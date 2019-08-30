@@ -14,7 +14,7 @@ app.get("/",(req,res)=>{
     var headline
     const search=req.query.input
     console.log(search)
-    newsapi.v2.topHeadlines({
+    newsapi.v2.everything({
         sources: 'bbc-news,bbc-sport,abc-news',
         q:search,
         language: 'en'

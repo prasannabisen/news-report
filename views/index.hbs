@@ -11,8 +11,8 @@
         <input id="input" name="input">
         <button id="button" type="submit" value="search">Submit</button>
     </form>
-    {{#each resp}}
-    <p id="headline">{{totalResults}}</p>
+    {{#each resp.articles}}
+    <p id="headline">{{title}}</p>
     {{/each}}
 </body>
 </html>
