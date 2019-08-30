@@ -21,8 +21,7 @@ app.get("/",(req,res)=>{
         language: 'en'
     }).then(response => {
         console.log(response);
-        const headline=response;
-        res.render('index',{headline})
+        res.render('index',{response})
 })
 })
 
