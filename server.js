@@ -14,13 +14,13 @@ app.get("/",(req,res)=>{
     var headline
     const search=req.query.input
     console.log(search)
-    newsapi.v2.everything({
+    newsapi.v2.topHeadlines({
         sources: 'bbc-news,bbc-sport,abc-news',
         q:search,
         language: 'en'
     }).then(response => {
         const resp=response;
-        console.log(response);
+        console.log(resp);
         res.render('index',{resp})
 })
 })
