@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="/">
@@ -12,8 +13,9 @@
         <button id="button" type="submit" value="search">Submit</button>
     </form>
     {{#each resp.articles}}
-    <p id="headline">{{title}}</p>
+    <p class="headline">{{title}}</p>
     <img class="image" src={{urlToImage}}>
+    <br>
     {{/each}}
 </body>
 </html>
