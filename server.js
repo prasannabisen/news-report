@@ -11,31 +11,24 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get("/",(req,res)=>{
+    var headline
+    const search=req.query.input
     res.render('index')
+    console.log(search)
+    newsapi.v2.everything({
+        sources: 'bbc-news,bbc-sport,abc-news',
+        q:search,
+        language: 'en'
+    }).then(response => {
+        console.log(response);
+        headline=response;
+        res.render('index',{headline})
+})
 })
 
 app.post('/',(req,res)=>{
     const inp=req.body.input
-    newsapi.v2.everything({
-        sources: 'bbc-news,bbc-sport,abc-news',
-        q:inp,
-        language: 'en'
-    }).then(response => {
-        var kk=response.articles;
-        var headline="";
-        var len=kk.length
-        console.log(len)
-        for(var i=1;i<len;i++)  
-        {
-            headline+=`<li>${response.articles[i].title}</li>`
-            console.log(response.articles[i].title)
-        }
-        res.send(headline)
-        }).catch(err=>{
-            console.log(err);
-        })
 })
-
 app.listen(port,()=>{
     console.log("connected")
 })
