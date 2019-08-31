@@ -12,7 +12,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get("/",(req,res)=>{
-    var headline
     const search=req.query.input
     console.log(search)
     newsapi.v2.everything({
