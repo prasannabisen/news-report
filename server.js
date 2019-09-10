@@ -22,7 +22,6 @@ app.get("/",(req,res)=>{
         const resp=response;
         console.log(resp);
         res.render('index',{resp})
-        const btn=document.getElementById('btn')
     })
 })
 
