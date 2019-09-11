@@ -16,8 +16,10 @@
     {{#each resp.articles}}
     <p class="headline">{{title}}</p>
     <img class="image" src={{urlToImage}}>
-    <a href={{url}}>[VIEW]</a>
-    <button class="btn">ClICK</button>
+    <div class="button">
+        <a href={{url}}>[VIEW]</a>
+        <button class="btn">ClICK</button>
+    </div>
     <br>
     {{/each}}
     <script src="clint.js"></script>
