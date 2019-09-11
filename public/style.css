@@ -14,3 +14,10 @@
 .class2{
     font-size: 50px;
 }
+
+@media(min-width:425px)
+{
+    .imageo{
+        display:block
+    }
+}
