@@ -8,7 +8,7 @@
         min-width:412px;
     }
     .headline{
-        left:140px;
+        padding-right: 40%;
         display:inline;
     }
     .image{
