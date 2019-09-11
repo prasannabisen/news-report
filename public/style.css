@@ -1,23 +1,42 @@
-.image{
-    height:10vh;
-    width:10vw;
-}
-
-.headline{
-    display:inline;
-}
-
-.frame{
-    display:none;
-}
-
-.class2{
-    font-size: 50px;
-}
-
-@media(max-width:425px)
+@media(min-width:576px)
 {
-    .imageo{
-        display:block
+    .all{
+        text-align: justify;
+        display:block;
+        height:140px;
+        width:100%;
+        min-width:412px;
+    }
+    .headline{
+        left:140px;
+        display:inline;
+    }
+    .image{
+
+        height:140px;
+    }
+    .button{
+        display:inline;
+    }
+}
+@media(max-width:576px)
+{
+    .all{
+        display:block;
+    }
+    .image{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        height:140px;
+        width:50%;
+    }
+    .headline{
+        display:block;
+        text-align: center;
+    }
+    .button{
+        display:block;
+        text-align: center;
     }
 }

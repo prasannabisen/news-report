@@ -14,21 +14,17 @@
         <input id="input" name="input">
         <button id="button" type="submit" value="search">Submit</button>
     </form>
-    <div class="row">
-        {{#each resp.articles}}
+    {{#each resp.articles}}
+    <div class="all">
         <p class="headline">{{title}}</p>
-        <div class="col-2 imageo">
-            <img class="image" src={{urlToImage}}>
-        </div>
-        <div class="col-1">
+        <img class="image" src={{urlToImage}}>
+        <div class="button">
             <a href={{url}}>[VIEW]</a>
-        </div>
-        <div class="col-1">
             <button class="btn">ClICK</button>
         </div>
-        <br>
-        {{/each}}
     </div>
+    <br>
+    {{/each}}
     <script src="clint.js"></script>
 </body>
 </html>
