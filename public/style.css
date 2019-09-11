@@ -7,8 +7,11 @@
         width:100%;
         min-width:412px;
     }
+    .kk{ 
+        display:inline;
+        padding-right:10vw;
+    }
     .headline{
-        padding-right: 40%;
         display:inline;
     }
     .image{
