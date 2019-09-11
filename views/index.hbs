@@ -7,19 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <form action="/">
         <input id="input" name="input">
         <button id="button" type="submit" value="search">Submit</button>
     </form>
-    {{#each resp.articles}}
-    <p class="headline">{{title}}</p>
-    <img class="image" src={{urlToImage}}>
-    <a href={{url}}>[VIEW]</a>
-    <button class="btn">ClICK</button>
-    <br>
-    {{/each}}
+    <div class="row">
+        {{#each resp.articles}}
+        <div class="col-7">
+            <p class="headline">{{title}}</p>
+        </div>
+        <div class="col-2">
+            <img class="image" src={{urlToImage}}>
+        </div>
+        <div class="col-1">
+            <a href={{url}}>[VIEW]</a>
+        </div>
+        <div class="col-1">
+            <button class="btn">ClICK</button>
+        </div>
+        <br>
+        {{/each}}
+    </div>
     <script src="clint.js"></script>
 </body>
 </html>
