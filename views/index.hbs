@@ -14,11 +14,13 @@
         <button id="button" type="submit" value="search">Submit</button>
     </form>
     {{#each resp.articles}}
-    <p class="headline">{{title}}</p>
-    <img class="image" src={{urlToImage}}>
-    <div class="button">
-        <a href={{url}}>[VIEW]</a>
-        <button class="btn">ClICK</button>
+    <div class="row">
+        <p class="headline col-md-6">{{title}}</p>
+        <img class="image col-md-4" src={{urlToImage}}>
+        <div class="button col-md-2">
+            <a href={{url}}>[VIEW]</a>
+            <button class="btn">ClICK</button>
+        </div>
     </div>
     <br>
     {{/each}}

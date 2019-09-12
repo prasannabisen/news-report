@@ -1,19 +1,15 @@
 .image{
     height:10vh;
     width:10vw;
+    display:inline;
 }
-
 .headline{
     display:inline;
 }
-
-.frame{
-    display:none;
+.button{
+    display:inline;
 }
 
-.class2{
-    font-size: 50px;
-}
 @media(max-width:576px)
 {
     .image{
