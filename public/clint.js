@@ -5,6 +5,5 @@ console.log(frame)
 for(let i=0;i<btn.length;i++)
 {
     btn[i].addEventListener('click',function(event){
-    frame.innerHTML=`<iframe scr="${event.target.dataset.url}" class="fra"></iframe>`
     })
 }
