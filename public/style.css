@@ -1,11 +1,17 @@
-.all{
-    display:block;
+.image{
+    display:inline;
 }
 .fra{
-    height: 100ph;
-    width:576px;
-    display:absolute;
+    height:50vh;
+    width:10vw;
 }
+.headline{
+    display:inline;
+}
+.button{
+    display:inline;
+}
+
 @media(max-width:576px)
 {
     .all{
@@ -25,5 +31,9 @@
     .button{
         display:block;
         text-align: center;
+    }
+    .fra{
+        height:50vh;
+        width:10vw;
     }
 }
