@@ -15,13 +15,15 @@ app.get("/",(req,res)=>{
     const search=req.query.input
     console.log(search)
     newsapi.v2.everything({
-        sources: 'bbc-news,bbc-sport,abc-news',
+        sources: 'bbc-news',
         q:search,
-        language: 'en'
+        language: 'en',
     }).then(response => {
         const resp=response;
         console.log(resp);
         res.render('index',{resp})
+    }).catch(err=>{
+        console.log(err)
     })
 })
 

@@ -1,26 +1,10 @@
-@media(min-width:576px)
-{
-    .all{
-        text-align: justify;
-        display:block;
-        height:140px;
-        width:100%;
-        min-width:412px;
-    }
-    .kk{ 
-        display:inline;
-        padding-right:10vw;
-    }
-    .headline{
-        display:inline;
-    }
-    .image{
-
-        height:140px;
-    }
-    .button{
-        display:inline;
-    }
+.all{
+    display:block;
+}
+.fra{
+    height: 100ph;
+    width:576px;
+    display:absolute;
 }
 @media(max-width:576px)
 {
