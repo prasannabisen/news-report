@@ -1,10 +1,8 @@
 .image{
-    height:10vh;
-    width:10vw;
     display:inline;
 }
 .fra{
-    height:20vh;
+    height:50vh;
     width:10vw;
 }
 .headline{
@@ -30,5 +28,9 @@
     .button{
         display:block;
         text-align: center;
+    }
+    .fra{
+        height:50vh;
+        width:10vw;
     }
 }
