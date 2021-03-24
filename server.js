@@ -1,9 +1,12 @@
+require('dotenv').config()
 const express=require("express")
 const app=express()
 const port=process.env.PORT ||3000
 
+const NEWS_SECRETE=process.env.NEWS_API
+
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('bef63e1bb3b84f68a62bc31d486bd332');
+const newsapi = new NewsAPI(NEWS_SECRETE);
 
 app.use(express.static('public'))
 app.set('view engine','hbs')
